@@ -33,6 +33,7 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.System.Cnds.EveryTick,
 		C3.Plugins.progressbar.Acts.SetProgress,
 		C3.Plugins.System.Cnds.CompareBetween,
+		C3.Plugins.Sprite.Acts.SetAnimFrame,
 		C3.Plugins.Text.Acts.SetPos,
 		C3.Plugins.System.Cnds.Every,
 		C3.Plugins.Audio.Acts.StopAll,
@@ -102,6 +103,10 @@ self.C3_JsPropNameTable = [
 	{Sprite5: 0},
 	{Sprite6: 0},
 	{mainScreen_sarcastic_item_text: 0},
+	{end_2: 0},
+	{char_select_controls: 0},
+	{text_shop1_healthT: 0},
+	{text_shop1_health: 0},
 	{random_insult: 0},
 	{character_select: 0},
 	{chosen_character: 0},
@@ -119,6 +124,7 @@ self.C3_JsPropNameTable = [
 	{eventPickr: 0},
 	{CHESTS: 0},
 	{random_Item: 0},
+	{health: 0},
 	{selected_shop1: 0}
 ];
 
@@ -182,5 +188,9 @@ self.InstanceType = {
 	ADS: class extends self.IButtonInstance {},
 	Sprite5: class extends self.ISpriteInstance {},
 	Sprite6: class extends self.ISpriteInstance {},
-	mainScreen_sarcastic_item_text: class extends self.ITextInstance {}
+	mainScreen_sarcastic_item_text: class extends self.ITextInstance {},
+	end_2: class extends self.ITextInstance {},
+	char_select_controls: class extends self.ITextInstance {},
+	text_shop1_healthT: class extends self.ITextInstance {},
+	text_shop1_health: class extends self.ITextInstance {}
 }
