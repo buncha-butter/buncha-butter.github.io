@@ -1287,22 +1287,36 @@ function or(l, r)
 }
 
 self.C3_ExpressionFuncs = [
-		() => 2,
-		() => -1,
-		() => 1,
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			return () => Math.round(f0(1, 3));
+		},
 		p => {
 			const v0 = p._GetNode(0).GetVar();
 			return () => v0.GetValue();
 		},
-		() => 0,
+		() => 1,
+		() => "dead",
+		() => 2,
+		() => "skill issue",
 		() => 3,
+		() => "fun fact! you lost",
+		() => -1,
+		() => 0,
+		() => "",
 		() => 4,
 		() => "1938, josef is a 12 year old boy from Berlin and is escaping Nazis with his sister and mother to get to Cuba",
 		() => "1994, Isabel is a 11 year old girl from Havana and is escaping cuba wich is under Fidel Castro. and she sold her trumpet for gas",
 		() => "2015, mahamoud is a 12 year old boy from Aleppo, Syria. a war conflict has happened in syria and he's escaping with his faimly to get to Germany",
 		() => 10,
+		() => 0.05,
 		() => 0.1,
-		() => 1000,
+		() => 2000,
+		() => "endings",
+		p => {
+			const n0 = p._GetNode(0);
+			return () => n0.ExpObject();
+		},
 		() => "distanceM",
 		() => 500,
 		() => 400,
@@ -1310,30 +1324,64 @@ self.C3_ExpressionFuncs = [
 		() => "event pictures",
 		() => "CONTROLS:\n\npress the s key to go to the shop (only works in towns)\n\nafter you purchase gas from the shop you can continue forward \n\n(you should REALLY buy gas)\n\nhave fun :)",
 		() => "AGHAGHAHGAGHA YOU'RE ENCOUNTERING ROCK OH NO\n\npress r to repair boat",
-		() => "",
 		() => "DUNN DUN DUUUU DUN  YOU'RE ENCOUNTERING SHARK OH NO\n\npress r to repair boat",
-		() => "ADS(unused)",
+		() => "oh look, a chest!\n\npress the O key to open (not the zero key)\n\npress the L key to leave the chest behind\n\nwho knows whats inside?",
+		() => "ticks",
+		() => "random events",
+		() => 8,
+		() => 9,
+		() => 18,
+		() => 19,
+		() => 25,
+		() => "keypress + conditions",
+		() => "your cooked",
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
 			return () => f0(100);
 		},
-		() => "your cooked",
+		() => "CHESTS",
+		() => "well that was dumb",
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			return () => f0(1, 100);
+		},
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			return () => Math.round(f0(1, 10));
+		},
+		() => "you got rations!",
+		() => 20,
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			return () => Math.round(f0(100, 1000));
+		},
+		() => "you got money!",
+		() => 30,
+		() => "you got some gas!",
+		() => 40,
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			return () => Math.round(f0(3, 14));
+		},
+		() => "you got some repair kits!",
+		() => "wow you got nothing!",
+		() => "character selected",
 		() => 5,
 		() => 35,
-		() => 15,
-		() => 20,
-		() => 25,
-		() => -0.1,
-		() => -0.05,
+		() => "out of gas",
+		() => "you have no gas",
 		() => 198.428212,
 		() => 14.746508,
 		() => 0.5,
 		() => -154.253492,
-		() => "endings",
-		p => {
-			const n0 = p._GetNode(0);
-			return () => n0.ExpObject();
-		},
+		() => "normal",
+		() => -0.1,
+		() => -0.05,
+		() => -2,
+		() => "music",
+		() => "main music",
+		() => "HUNGER",
+		() => "YOUR STARVING",
 		() => 50,
 		() => -50,
 		() => 100,
@@ -1349,7 +1397,8 @@ self.C3_ExpressionFuncs = [
 		() => "Animation 1",
 		() => 1.5,
 		() => "Default",
-		() => "thanks"
+		() => "thanks",
+		() => 0.00001
 ];
 
 
